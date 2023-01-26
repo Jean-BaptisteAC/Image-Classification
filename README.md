@@ -150,6 +150,6 @@ We choose here to do the t-SNE analyses with the same layers as the PCA analysis
 We can notice here that the t-SNE algorithms shows how the clustering operations are made. The figure that shows the best result in terms of separations of different classes is the t-SNE Analysis after the 200 size Dense Layer. 
 
 
-## Conlusion 
+## Conclusion 
 
 This simplified CNN model uses a combination of various types of Layers to achieve high-performances (98% accuracy on the test set) without using too much computation resources *(computation time is less than a minute with a Geforce GTX 1060 GPU)*. Moreover, the analysis made with tools like PCA and t-SNE helps us visualize how the classification process occurs between the neural layers. As we achieved a very high level of accuracy and that we used convolution layers and MaxPooling layers, which is a very satisfactory outcome.
