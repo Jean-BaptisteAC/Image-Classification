@@ -59,7 +59,7 @@ Those results are very good which is expected because of the low complexity of t
 
 ## PCA and t-SNE visualisation
 
-### PCA
+### PCA visualisation
 
 ![Image](Ressources/layer_5_bis.png)
 
@@ -67,3 +67,4 @@ Those results are very good which is expected because of the low complexity of t
 
 ![Image](Ressources/Layer_13.png)
 
+### t-SNE visualisation
