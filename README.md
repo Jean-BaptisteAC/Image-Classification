@@ -66,7 +66,6 @@ PCA is a popular technique for analyzing large datasets containing a high number
 In order to display the result of the PCA analysis, we will use the folowing piece of code:
 
 ```
-# Ploting PCA 2D
 myPalette = ['white', 'pink', 'yellow', 'orange', 'grey', 
              'red', 'purple', 'green', 'blue', 'black']
              
@@ -112,7 +111,27 @@ What we can see immediately is that the model tends to cluster the data points w
 
 ### t-SNE visualisation
 
-t-distributed stochastic neighbor embedding (t-SNE) is a statistical method for visualizing high-dimensional data by giving each datapoint a location in a two or three-dimensional map. Due to representation issues, we will represent our data into a 2D plot.
+t-distributed stochastic neighbor embedding (t-SNE) is a statistical method for visualizing high-dimensional data by giving each datapoint a location in a two or three-dimensional map. Due to representation issues, we will represent our data into a 2D plot. The following python function helps us ploting the t-SNE analysis: 
+
+```
+myPalette = ['white', 'pink', 'yellow', 'orange', 'grey', 
+             'red', 'purple', 'green', 'blue', 'black']
+
+def TSNE_2D(Xdata, Ylabels) :
+         
+    tsne = TSNE(n_components=2)
+    tsne_result = tsne.fit_transform(Xdata)
+    
+    plt.figure(figsize=(10,7))
+    
+    sns.scatterplot(x=tsne_result[:, 0], y=tsne_result[:,1], s=40, 
+                    hue=Ylabels, palette=myPalette, alpha=0.7)
+    
+    plt.title('t-SNE Analysis', pad=15)
+    plt.xlabel("t-SNE 1")
+    plt.ylabel("t-SNE 2")
+    plt.show()
+```
 
 We choose here to do the t-SNE analyses with the same layers as the PCA analysis.
 
