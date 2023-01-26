@@ -61,5 +61,9 @@ Those results are very good which is expected because of the low complexity of t
 
 ### PCA
 
-![Image](Ressources/Diagramm.drawio.png)
+![Image](Ressources/layer_5_bis.png)
+
+![Image](Ressources/Layer_11.png)
+
+![Image](Ressources/Layer_13.png)
 
