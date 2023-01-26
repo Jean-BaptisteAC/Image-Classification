@@ -1,9 +1,9 @@
 # :camera: Image Classification
 
 This project aims to classify images from the MNIST-number dataset using a simple Convolution Neural Network.
-One can understand that using only a few number of convolution layers can yeld to very good results. *
+One can understand that using only a few number of convolution layers can yeld to very good results. 
 
-We will also use dimension reduction and visualisation techniques like Principal Component Analysis (PCA) and t-distributed Dtochastic Neighbor Embedding (t-SNE) in order to visualise the process of classification within the layers of our neural network.
+We will also use dimension reduction and visualisation techniques like **Principal Component Analysis** (PCA) and **t-distributed Stochastic Neighbor Embedding** (t-SNE) in order to visualise the process of classification within the layers of our neural network.
 
 ## Using the code
 
