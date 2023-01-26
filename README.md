@@ -61,6 +61,35 @@ Those results are very good which is expected because of the low complexity of t
 
 ### PCA visualisation
 
+In order to display the result of the PCA analysis, we will use the folowing piece of code:
+
+```
+# Ploting PCA 2D
+myPalette = ['white', 'pink', 'yellow', 'orange', 'grey', 
+             'red', 'purple', 'green', 'blue', 'black']
+             
+def PCA_2D(Xdata, Ylabels) :
+    
+    scaler = StandardScaler()
+    scaler.fit(Xdata)
+    X_scaled = scaler.transform(Xdata)
+         
+    pca_2 = PCA(n_components=2 , random_state=2022)
+    pca_2.fit(X_scaled)
+    X_pac_2 = pca_2.transform(X_scaled)
+    
+    plt.figure(figsize=(10,7))
+    
+    sns.scatterplot(x=X_pac_2[:, 0], y=X_pac_2[:,1], s=40, 
+                    hue=Ylabels, palette=myPalette, alpha=0.7)
+    
+    plt.title('PCA Analysis', pad=15)
+    plt.xlabel("First PC")
+    plt.ylabel("Second PC")
+    plt.show()
+```    
+
+
 ![Image](Ressources/layer_5_bis.png)
 
 ![Image](Ressources/Layer_11.png)
