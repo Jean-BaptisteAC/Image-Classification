@@ -25,5 +25,12 @@ This architecture takes as input an 28x28 pixels image and returns a vector of s
 
 ## Results
 
+The accuracies computed with the model after learning are the following:
+
+**Train set** : Loss: 0.087 / Accuracy: 0.974
+
+**Test set**  : Loss: 0.069 / Accuracy: 0.980
+
+
 ## PCA and t-SNE visualisation
 
