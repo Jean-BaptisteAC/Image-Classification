@@ -98,3 +98,7 @@ def PCA_2D(Xdata, Ylabels) :
 ![Image](Ressources/Layer_13.png)
 
 ### t-SNE visualisation
+
+## Conlusion 
+
+This simplified CNN model uses a combination of various types of Layers to achieve high-performances (98% accuracy on the test set) without using too much computation resources *(computation time is less than a minute with a Geforce GTX 1060 GPU)*. Moreover, the analysis made with tools like PCA and t-SNE helps us visualize how the classification process occurs between the neural layers. As we achieved a very high level of accuracy and that we used convolution layers and MaxPooling layers, I can’t think of a way to further improve the Model.
