@@ -61,6 +61,8 @@ Those results are very good which is expected because of the low complexity of t
 
 ### PCA visualisation
 
+PCA is a popular technique for analyzing large datasets containing a high number of dimensions/features per observation, increasing the interpretability of data while preserving the maximum amount of information, and enabling the visualization of multidimensional data. This technique is very usefull here because it is really difficult to interpret the input data images as 28x28 arrays.
+
 In order to display the result of the PCA analysis, we will use the folowing piece of code:
 
 ```
@@ -88,7 +90,6 @@ def PCA_2D(Xdata, Ylabels) :
     plt.ylabel("Second PC")
     plt.show()
 ```    
-
 
 ![Image](Ressources/layer_5_bis.png)
 
