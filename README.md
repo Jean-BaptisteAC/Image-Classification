@@ -54,7 +54,7 @@ The accuracies computed with the model after learning are the following:
 
 **Test set**  : Loss: 0.069 / Accuracy: 0.980
 
-We can notice here that we don’t over-fitted the model because there exists no decrease in accuracy while shifting from the Train set to the Test set.
+We can notice here that we don’t over-fitted the dataset because there exists no decrease in accuracy while shifting from the Train set to the Test set.
 Those results are very good which is expected because of the low complexity of the MNIST data set. Moreover, CNN are very powerfull and are capable of yielding very good accuracies.
 
 ## PCA and t-SNE visualisation
@@ -91,13 +91,45 @@ def PCA_2D(Xdata, Ylabels) :
     plt.show()
 ```    
 
+The following figures represent the Principal Component Analysis taken after three selected layers of the model. These corresponding layers are: 
+- The 2nd Convolution Layer (of size 24x24x9)
+- The 3rd Dense layers (of size 200) 
+- The last SoftMax activation Dense Layer
+
 ![Image](Ressources/layer_5_bis.png)
+
+*The figure below is taken after the two convolution layers.*
 
 ![Image](Ressources/Layer_11.png)
 
+*This figure is taken after the 3rd Dense Layer (of size 200).*
+
 ![Image](Ressources/Layer_13.png)
 
+*The last Figure is taken after the last fully connected Layer.*
+
+What we can see immediately is that the model tends to cluster the data points with the same label. After the convolution Layers the model still struggles to differentiate the types of digits, however the output after the last fully connected layers can be split into different distincts cluster as shown from the last PCA figure.
+
 ### t-SNE visualisation
+
+t-distributed stochastic neighbor embedding (t-SNE) is a statistical method for visualizing high-dimensional data by giving each datapoint a location in a two or three-dimensional map. Due to representation issues, we will represent our data into a 2D plot.
+
+We choose here to do the t-SNE analyses with the same layers as the PCA analysis.
+
+![Image](Ressources/tSNE_Layer_5.png)
+
+*The figure below is taken after the two convolution layers.*
+
+![Image](Ressources/tSNE_Layer_11.png)
+
+*This figure is taken after the 3rd Dense Layer (of size 200).*
+
+![Image](Ressources/tSNE_Layer_13.png)
+
+*The last Figure is taken after the last fully connected Layer.*
+
+We can notice here that the t-SNE algorithms shows how the clustering operations are made. The figure that shows the best result in terms of separations of different classes is the t-SNE Analysis after the 200 size Dense Layer. 
+
 
 ## Conlusion 
 
