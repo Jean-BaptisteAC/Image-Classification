@@ -1,9 +1,9 @@
 # :camera: Image Classification
 
 This project aims to classify images from the MNIST-number dataset using a simple Convolution Neural Network (CNN).
-One can understand that using only a few number of convolution layers can yield to very good results. 
+One can understand that using only a few convolution layers can yield very good results. 
 
-We will also use dimension reduction and visualisation techniques like **Principal Component Analysis** (PCA) and **t-distributed Stochastic Neighbor Embedding** (t-SNE) in order to visualise the process of classification within the layers of our neural network.
+We will also use dimension reduction and visualization techniques like **Principal Component Analysis** (PCA) and **t-distributed Stochastic Neighbor Embedding** (t-SNE) in order to visualize the process of classification within the layers of our neural network.
 
 ## Using the code
 
@@ -54,16 +54,16 @@ The accuracies computed with the model after learning are the following:
 
 **Test set**  : Loss: 0.069 / Accuracy: 0.980
 
-We can notice here that we don’t over-fitted the dataset because there exists no decrease in accuracy while shifting from the Train set to the Test set.
-Those results are very good which is expected because of the low complexity of the MNIST data set. Moreover, CNN are very powerfull and are capable of yielding very good accuracies.
+We can notice here that we don’t over-fitted the dataset because there is no decrease in accuracy while shifting from the Train set to the Test set.
+Those results are very good which is expected because of the low complexity of the MNIST data set. Moreover, CNNs are very powerful and are capable of yielding very good accuracy.
 
-## PCA and t-SNE visualisation
+## PCA and t-SNE visualization
 
 ### PCA visualisation
 
-PCA is a popular technique for analyzing large datasets containing a high number of dimensions/features per observation, increasing the interpretability of data while preserving the maximum amount of information, and enabling the visualization of multidimensional data. This technique is very usefull here because of the difficulty to interpret the input data images as 28x28 arrays.
+PCA is a popular technique for analyzing large datasets containing a high number of dimensions/features per observation, increasing the interpretability of data while preserving the maximum amount of information, and enabling the visualization of multidimensional data. This technique is very useful here because of the difficulty to interpret the input data images as 28x28 arrays.
 
-In order to display the result of the PCA analysis, we will use the folowing piece of code:
+In order to display the result of the PCA analysis, we will use the following piece of code:
 
 ```
 myPalette = ['white', 'pink', 'yellow', 'orange', 'grey', 
@@ -107,11 +107,11 @@ The following figures represent the Principal Component Analysis taken after thr
 
 *The last Figure is taken after the last fully connected Layer.*
 
-What we can see immediately is that the model tends to cluster the data points with the same label. After the convolution Layers the model still struggles to differentiate the types of digits, however the output after the last fully connected layers can be split into different distincts cluster as shown from the last PCA figure.
+What we can see immediately is that the model tends to cluster the data points with the same label. After the convolution Layers the model still struggles to differentiate the types of digits, however the output after the last fully connected layers can be split into different distincts clusters as shown from the last PCA figure.
 
 ### t-SNE visualisation
 
-t-distributed stochastic neighbor embedding (t-SNE) is a statistical method for visualizing high-dimensional data by giving each datapoint a location in a two or three-dimensional map. Due to representation issues, we will represent our data into a 2D plot like we did with the PCA analysis. The following python function helps us ploting the t-SNE analysis: 
+t-distributed stochastic neighbor embedding (t-SNE) is a statistical method for visualizing high-dimensional data by giving each datapoint a location in a two or three-dimensional map. Due to representation issues, we will represent our data into a 2D plot like we did with the PCA analysis. The following python function helps us plotting the t-SNE analysis: 
 
 ```
 myPalette = ['white', 'pink', 'yellow', 'orange', 'grey', 
@@ -147,9 +147,10 @@ We choose here to do the t-SNE analyses with the same layers as the PCA analysis
 
 *The last Figure is taken after the last fully connected Layer.*
 
-We can notice here that the t-SNE algorithms shows how the clustering operations are made. The figure that shows the best result in terms of separations of different classes is the t-SNE Analysis after the 200 size Dense Layer. 
+We can notice here that the t-SNE algorithm shows how the clustering operations are made. The figure that shows the best result in terms of separations of different classes is the t-SNE Analysis after the 200 size Dense Layer. 
 
 
 ## Conclusion 
 
 This simplified CNN model uses a combination of various types of Layers to achieve high-performances (98% accuracy on the test set) without using too much computation resources *(computation time is less than a minute with a Geforce GTX 1060 GPU)*. Moreover, the analysis made with tools like PCA and t-SNE helps us visualize how the classification process occurs between the neural layers. As we achieved a very high level of accuracy and that we used convolution layers and MaxPooling layers, which is a very satisfactory outcome.
+
