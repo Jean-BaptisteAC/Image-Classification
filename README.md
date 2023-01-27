@@ -16,7 +16,7 @@ Other useful documents can be found in the **Ressources** Folder.
 
 The following figure gives us a scheme of the neural network, comprising Convolution Layers, ReLU layers, Max Pooling, Batch Normalization and Dense Layers for dimension reduction. 
 
-![Image](Ressources/Diagramm.drawio.png)
+![Image](Resources/Diagramm.drawio.png)
 
 *The written sizes are corresponding to the output format of data after each layer*
 
@@ -95,15 +95,15 @@ The following figures represent the Principal Component Analysis taken after thr
 - The 3rd Dense layers (of size 200) 
 - The last SoftMax activation Dense Layer
 
-![Image](Ressources/layer_5_bis.png)
+![Image](Resources/layer_5_bis.png)
 
 *The figure below is taken after the two convolution layers.*
 
-![Image](Ressources/Layer_11.png)
+![Image](Resources/Layer_11.png)
 
 *This figure is taken after the 3rd Dense Layer (of size 200).*
 
-![Image](Ressources/Layer_13.png)
+![Image](Resources/Layer_13.png)
 
 *The last Figure is taken after the last fully connected Layer.*
 
@@ -135,15 +135,15 @@ def TSNE_2D(Xdata, Ylabels) :
 
 We choose here to do the t-SNE analyses with the same layers as the PCA analysis.
 
-![Image](Ressources/tSNE_Layer_5.png)
+![Image](Resources/tSNE_Layer_5.png)
 
 *The figure below is taken after the two convolution layers.*
 
-![Image](Ressources/tSNE_Layer_11.png)
+![Image](Resources/tSNE_Layer_11.png)
 
 *This figure is taken after the 3rd Dense Layer (of size 200).*
 
-![Image](Ressources/tSNE_Layer_13.png)
+![Image](Resources/tSNE_Layer_13.png)
 
 *The last Figure is taken after the last fully connected Layer.*
 
